@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naše tabulka</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        table { border-collapse: collapse; border: 2px solid black; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        h1 { font-family: 'Times New Roman', serif; }
+    </style>
+</head>
+<body>
+
+    <h1>Naše tabulka</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Jméno</th>
+                <th>Výška (cm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for uzivatel in uzivatele %}
+            <tr>
+                <td>{{ uzivatel.jmeno }}</td>
+                <td>{{ uzivatel.vyska }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
