@@ -21,6 +21,11 @@ class Uzivatel(db.Model):
 
     def __repr__(self):
         return f'<Uživatel {self.jmeno}>'
+        
+# DŮLEŽITÉ: Inicializace databáze
+with app.app_context():
+    db.create_all()
+    print("Databázové tabulky byly vytvořeny!")
 
 # Hlavní cesta (route), která zobrazí naši stránku
 @app.route('/')
