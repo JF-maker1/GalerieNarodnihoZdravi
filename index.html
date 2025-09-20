@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Galerie národního zdraví</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie národního zdraví</title>
 </head>
 <body>
+    <h1>Galerie Národního Zdraví</h1>
 
-  <h1>Galerie Národního Zdraví</h1>
+    <a href="https://www.youtube.com/watch?v=0FqlQG6Oe14" target="_blank" id="youtubeVideoLink">
+        Přehrát video na YouTube
+    </a>
 
+    <p id="videoTitleDisplay">
+        Načítám název videa...
+    </p>
+
+    <script>
+        // Termín: Konstanty pro API.
+        const API_KEY = 'AIzaSyCF-gaw62KFl5VUcxE6EEjbk4UDdUb90_E';
+        const VIDEO_ID = '0FqlQG6Oe14';
+
+        // Termín: Získání HTML prvků.
+        const videoLinkElement = document.getElementById('youtubeVideoLink');
+        const titleElement = document.getElementById('videoTitleDisplay');
+
+        // Termín: Funkce pro asynchronní volání API.
+        function fetchVideoTitle() {
+            // Termín: Odeslání HTTP požadavku.
+            fetch(`https://www.googleapis.com/youtube/v3/videos?id=${VIDEO_ID}&key=${API_KEY}&part=snippet`)
+                // Termín: Zpracování odpovědi.
+                .then(response => {
+                    // Termín: Kontrola stavu odpovědi.
+                    if (!response.ok) {
+                        throw new Error('Chyba při načítání dat z YouTube API.');
+                    }
+                    // Termín: Převedení na JSON.
+                    return response.json();
+                })
+                .then(data => {
+                    // Termín: Získání názvu videa z dat.
+                    const videoTitle = data.items[0].snippet.title;
+                    // Termín: Aktualizace HTML obsahu.
+                    titleElement.textContent = `Název: ${videoTitle}`;
+                })
+                .catch(error => {
+                    // Termín: Ošetření chyby.
+                    titleElement.textContent = `Nepodařilo se načíst název. Chyba: ${error.message}`;
+                    console.error('Chyba:', error);
+                });
+        }
+
+        // Termín: Spuštění skriptu po načtení DOM.
+        document.addEventListener('DOMContentLoaded', fetchVideoTitle);
+    </script>
 </body>
 </html>
