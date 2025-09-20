@@ -8,53 +8,199 @@
 <body>
     <h1>Galerie Národního Zdraví</h1>
 
-    <iframe 
-        id="youtubePlayer"
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/0FqlQG6Oe14" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-
+    <div id="player"></div>
+    
     <p id="videoTitleDisplay">Načítám název videa...</p>
     
+    <!-- Hierarchický přehled témat s interaktivními odkazy -->
+    <p><strong>Obsah videa: Biologická detoxikace mikroplastů a těžkých kovů pomocí Chitosanu</strong></p>
+    <ul>
+        <li><a href="#" class="jump-to-time" data-start="0" data-end="1102">Hlavní téma (0:00 - 18:22)</a>
+            <ul>
+                <li><a href="#" class="jump-to-time" data-start="9" data-end="124">Chitin a Chitosan (0:09 - 2:04)</a>
+                    <ul>
+                        <li><a href="#" class="jump-to-time" data-start="42" data-end="93">Chitin (0:42 - 1:33)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="42" data-end="53">Původ Chitinu (0:42 - 0:53)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="54" data-end="71">Biopolymerová povaha (0:54 - 1:11)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="79" data-end="93">Nevýhody a nestravitelnost (1:19 - 1:33)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="jump-to-time" data-start="94" data-end="124">Chitosan (1:34 - 2:04)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="94" data-end="105">Výroba Chitosanu (1:34 - 1:45)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="106" data-end="124">Vlastnosti Chitosanu (1:46 - 2:04)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="jump-to-time" data-start="125" data-end="748">Využití a účinky Chitosanu (2:05 - 12:28)</a>
+                    <ul>
+                        <li><a href="#" class="jump-to-time" data-start="125" data-end="192">Detoxikační funkce (2:05 - 3:12)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="125" data-end="141">Princip vazby (2:05 - 2:21)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="143" data-end="167">Multifunkční detoxikační činidlo (2:23 - 2:47)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="169" data-end="192">Použití v čištění vody (2:49 - 3:12)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="jump-to-time" data-start="193" data-end="622">Pozitivní účinky na zdraví (3:13 - 10:22)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="213" data-end="320">Cholesterol a žlučové kyseliny (3:33 - 5:20)</a>
+                                    <ul>
+                                        <li><a href="#" class="jump-to-time" data-start="213" data-end="236">Vazba žlučových kyselin (3:33 - 3:56)</a></li>
+                                        <li><a href="#" class="jump-to-time" data-start="237" data-end="304">Snížení cholesterolu (3:57 - 5:04)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="jump-to-time" data-start="355" data-end="579">Další klinická využití (5:55 - 9:39)</a>
+                                    <ul>
+                                        <li><a href="#" class="jump-to-time" data-start="355" data-end="365">Vazba na plasty (5:55 - 6:05)</a></li>
+                                        <li><a href="#" class="jump-to-time" data-start="366" data-end="403">Podpora hojení (6:06 - 6:43)</a></li>
+                                        <li><a href="#" class="jump-to-time" data-start="404" data-end="516">Vliv na střevní mikrobiom (6:44 - 8:36)</a>
+                                            <ul>
+                                                <li><a href="#" class="jump-to-time" data-start="420" data-end="451">Obnova mikrobiomu (7:00 - 7:31)</a></li>
+                                                <li><a href="#" class="jump-to-time" data-start="482" data-end="516">Snížení zánětů (8:02 - 8:36)</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="jump-to-time" data-start="518" data-end="536">Zrychlení hojení kostí (8:38 - 8:56)</a></li>
+                                        <li><a href="#" class="jump-to-time" data-start="537" data-end="579">Snížení rezistence na antibiotika (8:57 - 9:39)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="jump-to-time" data-start="585" data-end="622">Syndrom propustného střeva (9:45 - 10:22)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="jump-to-time" data-start="624" data-end="748">Doporučený produkt (10:24 - 12:28)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="624" data-end="675">Výhody produktu (10:24 - 11:15)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="675" data-end="696">Složení (11:15 - 11:36)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="698" data-end="748">Doporučení pro užívání (11:38 - 12:28)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="jump-to-time" data-start="750" data-end="1102">Užívání a bezpečnost (12:30 - 18:22)</a>
+                    <ul>
+                        <li><a href="#" class="jump-to-time" data-start="750" data-end="793">Dávkování (12:30 - 13:13)</a></li>
+                        <li><a href="#" class="jump-to-time" data-start="794" data-end="851">Testování mikroplastů (13:14 - 14:11)</a></li>
+                        <li><a href="#" class="jump-to-time" data-start="852" data-end="996">Vedlejší účinky a rizika (14:12 - 16:36)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="866" data-end="900">Vazba živin (14:26 - 15:00)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="904" data-end="915">Kontraindikace (15:04 - 15:15)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="916" data-end="961">Možné intolerance (15:16 - 16:01)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="962" data-end="996">Lékové interakce (16:02 - 16:36)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="jump-to-time" data-start="997" data-end="1102">Celostní přístup k detoxikaci (16:37 - 18:22)</a>
+                            <ul>
+                                <li><a href="#" class="jump-to-time" data-start="997" data-end="1025">Komplexnost (16:37 - 17:05)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="1026" data-end="1069">Doplnění stravy (17:06 - 17:49)</a></li>
+                                <li><a href="#" class="jump-to-time" data-start="1070" data-end="1102">Životní styl (17:50 - 18:22)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
     <script>
         // Dílčí problém: Konstanty pro API a video.
         const API_KEY = 'AIzaSyCF-gaw62KFl5VUcxE6EEjbk4UDdUb90_E';
         const VIDEO_ID = '0FqlQG6Oe14';
 
-        // Dílčí problém: Získání HTML prvků pro manipulaci.
+        // 1. Krok: Načtení YouTube IFrame Player API skriptu
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        var stopTimer = null; // Proměnná pro ukládání časovače
+
+        // 2. Krok: Funkce volaná po načtení API
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: VIDEO_ID,
+                playerVars: {
+                    'controls': 1,
+                    'autoplay': 0
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Přehrávač je připraven, nyní ho můžeme ovládat.
+        }
+
+        // 3. Krok: Reakce na změnu stavu přehrávače
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                // Pokud video hraje, spustíme kontrolu času
+                checkVideoTime();
+            } else {
+                // Pokud video nehraje, zrušíme kontrolu
+                if (stopTimer) {
+                    clearInterval(stopTimer);
+                }
+            }
+        }
+        
+        // 4. Krok: Funkce pro kontrolu času
+        function checkVideoTime() {
+            // Čas pro ukončení je uložen ve vlastnosti "end" na přehrávači
+            const endTime = player.end;
+            if (!endTime) return; // Pokud není nastaven čas konce, nedělej nic.
+
+            stopTimer = setInterval(() => {
+                const currentTime = player.getCurrentTime();
+                if (currentTime >= endTime) {
+                    player.stopVideo();
+                    clearInterval(stopTimer);
+                    player.end = null; // Resetujeme čas konce
+                }
+            }, 100); // Kontrolujeme každých 100 ms
+        }
+
+        // Získání HTML prvků a obsluha kliknutí
+        const jumpLinks = document.querySelectorAll('.jump-to-time');
         const titleElement = document.getElementById('videoTitleDisplay');
 
-        // Dílčí problém: Asynchronní funkce pro načtení dat.
+        jumpLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const startTime = parseFloat(event.target.getAttribute('data-start'));
+                const endTime = parseFloat(event.target.getAttribute('data-end'));
+
+                player.seekTo(startTime, true); // Skočíme na startovní čas a spustíme
+                player.playVideo();
+                player.end = endTime; // Uložíme si čas pro ukončení
+            });
+        });
+
+        // Dílčí problém: Načtení názvu videa
         function fetchVideoTitle() {
-            // Dílčí problém: Odeslání HTTP požadavku.
             fetch(`https://www.googleapis.com/youtube/v3/videos?id=${VIDEO_ID}&key=${API_KEY}&part=snippet`)
-                // Dílčí problém: Zpracování odpovědi.
                 .then(response => {
-                    // Dílčí problém: Kontrola stavu odpovědi.
                     if (!response.ok) {
                         throw new Error('Chyba při načítání dat z YouTube API.');
                     }
-                    // Dílčí problém: Převedení na JSON.
                     return response.json();
                 })
                 .then(data => {
-                    // Dílčí problém: Získání názvu videa z dat.
                     const videoTitle = data.items[0].snippet.title;
-                    // Dílčí problém: Aktualizace HTML obsahu.
                     titleElement.textContent = `Název: ${videoTitle}`;
                 })
                 .catch(error => {
-                    // Dílčí problém: Ošetření chyby.
                     titleElement.textContent = `Nepodařilo se načíst název. Chyba: ${error.message}`;
                     console.error('Chyba:', error);
                 });
         }
-
-        // Dílčí problém: Spuštění skriptu po načtení DOM.
+        
         document.addEventListener('DOMContentLoaded', fetchVideoTitle);
     </script>
 </body>
