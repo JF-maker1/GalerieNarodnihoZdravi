@@ -6,21 +6,78 @@
     <title>Galerie videí | Národní Zdraví</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      .underline-heading-1, .underline-heading-2 {
+        display: flex;
+        align-items: center;
+        /* Nastavuje odsazení celého bloku od levého okraje, např. 100px */
+        margin-left: 0px;
+      }
+      .underline-heading-1::before {
+        content: '';
+        height: 2px;
+        width: 50px; /* Délka linky před prvním slovem */
+        background-color: #1e40af;
+      }
+      .underline-heading-2::before {
+        content: '';
+        height: 2px;
+        width: 110px; /* Délka linky před prvním slovem */
+        background-color: #166534;
+      }
+
+      .underline-heading-1 .line {
+        /* Pevná šířka linky mezi slovy */
+        width: 10px; 
+        height: 2px;
+        background-color: #1e40af;
+      }
+      .underline-heading-2 .line {
+        width: 50px;
+        height: 2px;
+        background-color: #166534;
+      }
+
+      .underline-heading-1 .word,
+      .underline-heading-2 .word {
+        white-space: nowrap; 
+      }
+
+      /* Koncová linka se roztáhne na zbytek řádku */
+      .underline-heading-1 .end-line {
+          flex-grow: 1;
+          height: 2px;
+          background-color: #1e40af;
+      }
+      .underline-heading-2 .end-line {
+          flex-grow: 1;
+          height: 2px;
+          background-color: #166534;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="section-header blue-line">Galerie videí s myšlenkovými mapami</h1>
-        <p class="mb-6">Vyberte si video ze seznamu níže. Po kliknutí se dostanete na stránku s přehrávačem a interaktivní myšlenkovou mapou, která vám umožní snadno přeskakovat na konkrétní témata ve videu.</p>
-        
-        <!-- Tento kontejner bude dynamicky naplněn seznamem videí pomocí JavaScriptu -->
-        <div id="video-list" class="space-y-4">
-            <!-- Příklad odkazu, který bude generován:
-            <a href="video.html?id=ID_VIDEA" class="block p-4 bg-gray-100 rounded hover:bg-blue-100">Název videa</a> 
-            -->
+        <div class="text-4xl text-blue-800 mb-2 underline-heading-1">
+            <span class="word">Galerie</span>
+            <span class="line"></span>
+            <span class="word">Národního</span>
+            <span class="line"></span>
+            <span class="word">Zdraví</span>
+            <span class="end-line"></span>
+        </div>
+
+        <div class="text-3xl text-green-600 mb-1 underline-heading-2">
+            <span class="word">Galerie</span>
+            <span class="line"></span>
+            <span class="word">videí</span>
+            <span class="end-line"></span>
+        </div>
+
+        <div id="video-list" class="ml-0">
         </div>
     </div>
-    
-    <!-- Načtení dat a hlavního skriptu -->
     <script src="data/videos.js"></script>
     <script src="js/main.js" defer></script>
 </body>

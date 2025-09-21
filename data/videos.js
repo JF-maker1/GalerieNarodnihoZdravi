@@ -2,7 +2,7 @@
 const videos = [
     {
         id: '0FqlQG6Oe14', // YouTube Video ID
-        title: 'Myšlenková mapa: Detoxikace mikroplastů a těžkých kovů',
+        title: 'Detoxikace mikroplastů a těžkých kovů',
         topics: [
             {
                 header: 'Klíčový prostředek: Chitosan',
@@ -93,7 +93,7 @@ const videos = [
     },
     {
         id: 'MTKmY2R-js0',
-        title: 'Myšlenková mapa: Nebezpečí mikroplastu',
+        title: 'Nebezpečí mikroplastu',
         topics: [
             {
                 header: 'Hlavní téma: Mikroplastik a jeho nebezpečí pro lidské zdraví',
