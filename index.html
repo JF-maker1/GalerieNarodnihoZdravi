@@ -4,104 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie národního zdraví</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        .section-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .topic-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            border-bottom: 2px solid #a3a3a3; /* Tmavší šedá linka pro podtržení */
+            padding-bottom: 0.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .sub-section-header {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #4b5563;
+            border-bottom: 2px solid #16a34a; /* Zelená linka pro podnadpisy */
+            padding-bottom: 0.25rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.list-disc li {
+            list-style: none;
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.list-disc li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #player-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        #player {
+            width: 560px;
+            height: 315px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .orange-line {
+            border-bottom: 2px solid #f97316; /* Oranžová linka */
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blue-line {
+            border-bottom: 2px solid #3b82f6; /* Modrá linka */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .indent-1 {
+            margin-left: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Galerie Národního Zdraví</h1>
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-6">Galerie Národního Zdraví</h1>
 
-    <div id="player"></div>
-    
-    <p id="videoTitleDisplay">Načítám název videa...</p>
-    
-    <!-- Hierarchický přehled témat s interaktivními odkazy -->
-    <p><strong>Obsah videa: Biologická detoxikace mikroplastů a těžkých kovů pomocí Chitosanu</strong></p>
-    <ul>
-        <li><a href="#" class="jump-to-time" data-start="0" data-end="1102">Hlavní téma (0:00 - 18:22)</a>
-            <ul>
-                <li><a href="#" class="jump-to-time" data-start="9" data-end="124">Chitin a Chitosan (0:09 - 2:04)</a>
-                    <ul>
-                        <li><a href="#" class="jump-to-time" data-start="42" data-end="93">Chitin (0:42 - 1:33)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="42" data-end="53">Původ Chitinu (0:42 - 0:53)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="54" data-end="71">Biopolymerová povaha (0:54 - 1:11)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="79" data-end="93">Nevýhody a nestravitelnost (1:19 - 1:33)</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="jump-to-time" data-start="94" data-end="124">Chitosan (1:34 - 2:04)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="94" data-end="105">Výroba Chitosanu (1:34 - 1:45)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="106" data-end="124">Vlastnosti Chitosanu (1:46 - 2:04)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#" class="jump-to-time" data-start="125" data-end="748">Využití a účinky Chitosanu (2:05 - 12:28)</a>
-                    <ul>
-                        <li><a href="#" class="jump-to-time" data-start="125" data-end="192">Detoxikační funkce (2:05 - 3:12)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="125" data-end="141">Princip vazby (2:05 - 2:21)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="143" data-end="167">Multifunkční detoxikační činidlo (2:23 - 2:47)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="169" data-end="192">Použití v čištění vody (2:49 - 3:12)</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="jump-to-time" data-start="193" data-end="622">Pozitivní účinky na zdraví (3:13 - 10:22)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="213" data-end="320">Cholesterol a žlučové kyseliny (3:33 - 5:20)</a>
-                                    <ul>
-                                        <li><a href="#" class="jump-to-time" data-start="213" data-end="236">Vazba žlučových kyselin (3:33 - 3:56)</a></li>
-                                        <li><a href="#" class="jump-to-time" data-start="237" data-end="304">Snížení cholesterolu (3:57 - 5:04)</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" class="jump-to-time" data-start="355" data-end="579">Další klinická využití (5:55 - 9:39)</a>
-                                    <ul>
-                                        <li><a href="#" class="jump-to-time" data-start="355" data-end="365">Vazba na plasty (5:55 - 6:05)</a></li>
-                                        <li><a href="#" class="jump-to-time" data-start="366" data-end="403">Podpora hojení (6:06 - 6:43)</a></li>
-                                        <li><a href="#" class="jump-to-time" data-start="404" data-end="516">Vliv na střevní mikrobiom (6:44 - 8:36)</a>
-                                            <ul>
-                                                <li><a href="#" class="jump-to-time" data-start="420" data-end="451">Obnova mikrobiomu (7:00 - 7:31)</a></li>
-                                                <li><a href="#" class="jump-to-time" data-start="482" data-end="516">Snížení zánětů (8:02 - 8:36)</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" class="jump-to-time" data-start="518" data-end="536">Zrychlení hojení kostí (8:38 - 8:56)</a></li>
-                                        <li><a href="#" class="jump-to-time" data-start="537" data-end="579">Snížení rezistence na antibiotika (8:57 - 9:39)</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" class="jump-to-time" data-start="585" data-end="622">Syndrom propustného střeva (9:45 - 10:22)</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="jump-to-time" data-start="624" data-end="748">Doporučený produkt (10:24 - 12:28)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="624" data-end="675">Výhody produktu (10:24 - 11:15)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="675" data-end="696">Složení (11:15 - 11:36)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="698" data-end="748">Doporučení pro užívání (11:38 - 12:28)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#" class="jump-to-time" data-start="750" data-end="1102">Užívání a bezpečnost (12:30 - 18:22)</a>
-                    <ul>
-                        <li><a href="#" class="jump-to-time" data-start="750" data-end="793">Dávkování (12:30 - 13:13)</a></li>
-                        <li><a href="#" class="jump-to-time" data-start="794" data-end="851">Testování mikroplastů (13:14 - 14:11)</a></li>
-                        <li><a href="#" class="jump-to-time" data-start="852" data-end="996">Vedlejší účinky a rizika (14:12 - 16:36)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="866" data-end="900">Vazba živin (14:26 - 15:00)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="904" data-end="915">Kontraindikace (15:04 - 15:15)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="916" data-end="961">Možné intolerance (15:16 - 16:01)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="962" data-end="996">Lékové interakce (16:02 - 16:36)</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="jump-to-time" data-start="997" data-end="1102">Celostní přístup k detoxikaci (16:37 - 18:22)</a>
-                            <ul>
-                                <li><a href="#" class="jump-to-time" data-start="997" data-end="1025">Komplexnost (16:37 - 17:05)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="1026" data-end="1069">Doplnění stravy (17:06 - 17:49)</a></li>
-                                <li><a href="#" class="jump-to-time" data-start="1070" data-end="1102">Životní styl (17:50 - 18:22)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+        <div class="section-header blue-line">Myšlenková mapa: Detoxikace mikroplastů a těžkých kovů</div>
+        <div class="topic-header orange-line">Hlavní téma: Biologická detoxikace</div>
+
+        <div id="player-container">
+            <div id="player"></div>
+            <p id="videoTitleDisplay" class="text-center text-gray-600 my-4">Načítám název videa...</p>
+        </div>
+        
+        <div class="space-y-4">
+            <h2 class="topic-header orange-line">Klíčový prostředek: Chitosan</h2>
+            <ul class="list-disc ml-4">
+                <li><a href="#" data-start="42" data-end="76">Vychází z chitinu (biopolymer z exoskeletu korýšů) (0:42 - 1:16)</a></li>
+                <li><a href="#" data-start="79" data-end="93">Chitin je nestravitelný (1:19 - 1:33)</a></li>
+                <li><a href="#" data-start="94" data-end="124">Chitosan je derivát chitinu, získaný chemickou modifikací, což zvyšuje jeho rozpustnost a aktivitu (1:34 - 2:04)</a></li>
+                <li><a href="#" data-start="652" data-end="675">Ve videu zmíněn speciální chitosan z hlívy ústřičné (Pleurotus ostreatus) jako čistší alternativa bez kontaminace (10:52 - 11:15)</a></li>
             </ul>
-        </li>
-    </ul>
 
+            <h2 class="topic-header orange-line">Mechanismus účinku</h2>
+            <ul class="list-disc ml-4">
+                <li><a href="#" data-start="125" data-end="141">Vazba škodlivin: Funguje jako bipolární vláknina, která váže jak hydrofilní, tak hydrofobní látky (2:05 - 2:21)</a></li>
+                <li><a href="#" data-start="135" data-end="141">Vytváří nevstřebatelné komplexy se škodlivinami, které jsou následně vyloučeny z těla (2:15 - 2:21)</a></li>
+                <li><a href="#" data-start="155" data-end="167">Primární detoxikace: Váže mikroplasty a těžké kovy, které se často spojují (2:35 - 2:47)</a></li>
+                <li><a href="#" data-start="357" data-end="365">In vitro testy potvrzují schopnost vázat plasty (5:57 - 6:05)</a></li>
+                <li><a href="#" data-start="171" data-end="192">Využití v čištění odpadních vod (2:51 - 3:12)</a></li>
+            </ul>
+
+            <h2 class="topic-header orange-line">Účinky na organismus a léčebný potenciál</h2>
+            <div class="indent-1">
+                <div class="sub-section-header">Trávicí systém:</div>
+                <ul class="list-disc ml-4">
+                    <li><a href="#" data-start="213" data-end="236">Váže žlučové kyseliny, což podporuje jejich vyšší tvorbu a detoxikaci jater (3:33 - 3:56)</a></li>
+                    <li><a href="#" data-start="417" data-end="451">Působí jako prebiotikum, podporuje diverzitu a obnovu střevního mikrobiomu (6:57 - 7:31)</a></li>
+                    <li><a href="#" data-start="469" data-end="476">Zmírňuje zánětlivá střevní onemocnění (Crohnova choroba, ulcerózní kolitida) (7:49 - 7:56)</a></li>
+                    <li><a href="#" data-start="585" data-end="604">Zlepšuje stav při syndromu propustného střeva, posiluje střevní bariéru (9:45 - 10:04)</a></li>
+                </ul>
+            </div>
+            
+            <div class="indent-1">
+                <div class="sub-section-header">Další účinky:</div>
+                <ul class="list-disc ml-4">
+                    <li><a href="#" data-start="237" data-end="304">Snížení cholesterolu: Nepřímo snižuje hladinu cholesterolu díky vazbě na žlučové kyseliny (3:57 - 5:04)</a></li>
+                    <li><a href="#" data-start="484" data-end="516">Protizánětlivé: Redukuje zánětlivé mediátory (cytokiny jako TNF-α) (8:04 - 8:36)</a></li>
+                    <li><a href="#" data-start="367" data-end="403">Hojení: Podporuje hojení zánětů u zubních implantátů (6:07 - 6:21), hojení nervových poškození (6:24 - 6:43) a zrychluje regeneraci kostí (8:38 - 8:56)</a></li>
+                    <li><a href="#" data-start="537" data-end="579">Antibakteriální synergie: Zvyšuje účinnost antibiotik proti některým bakteriím (např. Pseudomonas aeruginosa, nemocniční kmen) (8:57 - 9:39)</a></li>
+                </ul>
+            </div>
+
+            <h2 class="topic-header orange-line">Dávkování, vedlejší účinky a rizika</h2>
+            <div class="indent-1">
+                <div class="sub-section-header">Dávkování:</div>
+                <ul class="list-disc ml-4">
+                    <li><a href="#" data-start="813" data-end="816">Důležitá je pravidelnost (13:33 - 13:36)</a></li>
+                    <li><a href="#" data-start="758" data-end="763">Doporučuje se užívání v rámci krátkodobé kúry (4-6 týdnů) (12:38 - 12:43)</a></li>
+                    <li><a href="#" data-start="764" data-end="783">Postupné navyšování dávky (3-6 kapslí denně) (12:44 - 13:03)</a></li>
+                    <li><a href="#" data-start="868" data-end="888">Doplnění vitamínů: Váže vitamíny rozpustné v tucích (A, D, E, K) a esenciální mastné kyseliny, proto je nutná jejich suplementace (14:28 - 14:48)</a></li>
+                </ul>
+            </div>
+            
+            <div class="indent-1">
+                <div class="sub-section-header">Možné vedlejší účinky:</div>
+                <ul class="list-disc ml-4">
+                    <li><a href="#" data-start="917" data-end="921">Alergie na korýše (15:17 - 15:21)</a></li>
+                    <li><a href="#" data-start="928" data-end="946">Zácpa, průjem, plynatost (při nedostatečném pití nebo vysoké počáteční dávce) (15:28 - 15:46)</a></li>
+                    <li><a href="#" data-start="965" data-end="996">Lékové interakce: Může snižovat vstřebávání léků (např. antikonvulziva, antikoncepce), je nutný časový odstup 4 hodiny (16:05 - 16:36)</a></li>
+                </ul>
+            </div>
+
+            <h2 class="topic-header orange-line">Testování a širší souvislosti</h2>
+            <div class="indent-1">
+                <div class="sub-section-header">Testování mikroplastů:</div>
+                <ul class="list-disc ml-4">
+                    <li><a href="#" data-start="810" data-end="851">V současné době chybí standardizované a rutinní krevní testy pro mikroplasty, i když existují soukromé možnosti (13:30 - 14:11)</a></li>
+                </ul>
+            </div>
+            
+            <div class="indent-1">
+                <div class="sub-section-header">Celostní detoxikace:</div> Samotný chitosan nestačí. Důraz je kladen na celostní přístup, který zahrnuje:
+                <ul class="list-disc ml-4">
+                    <li><a href="#" data-start="1026" data-end="1035">Doplnění stravy (antioxidanty, minerály, vitamíny, kolagen) (17:06 - 17:15)</a></li>
+                    <li><a href="#" data-start="1035" data-end="1069">Zdravé oleje (omega-3 z lněného oleje) (17:15 - 17:49)</a></li>
+                    <li><a href="#" data-start="1074" data-end="1084">Fyzickou aktivitu (posilování, studené sprchy, sauna) (17:54 - 18:04)</a></li>
+                    <li><a href="#" data-start="1085" data-end="1090">Relaxaci a péči o psychiku, protože "léčení je možné jen v relaxaci" (18:05 - 18:10)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
     <script>
         // Dílčí problém: Konstanty pro API a video.
         const API_KEY = 'AIzaSyCF-gaw62KFl5VUcxE6EEjbk4UDdUb90_E';
@@ -114,7 +205,7 @@
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         var player;
-        var stopTimer = null; // Proměnná pro ukládání časovače
+        var stopTimer = null;
 
         // 2. Krok: Funkce volaná po načtení API
         function onYouTubeIframeAPIReady() {
@@ -134,16 +225,14 @@
         }
 
         function onPlayerReady(event) {
-            // Přehrávač je připraven, nyní ho můžeme ovládat.
+            // Přehrávač je připraven
         }
 
         // 3. Krok: Reakce na změnu stavu přehrávače
         function onPlayerStateChange(event) {
             if (event.data == YT.PlayerState.PLAYING) {
-                // Pokud video hraje, spustíme kontrolu času
                 checkVideoTime();
             } else {
-                // Pokud video nehraje, zrušíme kontrolu
                 if (stopTimer) {
                     clearInterval(stopTimer);
                 }
@@ -152,22 +241,21 @@
         
         // 4. Krok: Funkce pro kontrolu času
         function checkVideoTime() {
-            // Čas pro ukončení je uložen ve vlastnosti "end" na přehrávači
             const endTime = player.end;
-            if (!endTime) return; // Pokud není nastaven čas konce, nedělej nic.
+            if (!endTime) return;
 
             stopTimer = setInterval(() => {
                 const currentTime = player.getCurrentTime();
                 if (currentTime >= endTime) {
                     player.stopVideo();
                     clearInterval(stopTimer);
-                    player.end = null; // Resetujeme čas konce
+                    player.end = null;
                 }
-            }, 100); // Kontrolujeme každých 100 ms
+            }, 100);
         }
 
         // Získání HTML prvků a obsluha kliknutí
-        const jumpLinks = document.querySelectorAll('.jump-to-time');
+        const jumpLinks = document.querySelectorAll('a[data-start]');
         const titleElement = document.getElementById('videoTitleDisplay');
 
         jumpLinks.forEach(link => {
@@ -176,9 +264,9 @@
                 const startTime = parseFloat(event.target.getAttribute('data-start'));
                 const endTime = parseFloat(event.target.getAttribute('data-end'));
 
-                player.seekTo(startTime, true); // Skočíme na startovní čas a spustíme
+                player.seekTo(startTime, true);
                 player.playVideo();
-                player.end = endTime; // Uložíme si čas pro ukončení
+                player.end = endTime;
             });
         });
 
