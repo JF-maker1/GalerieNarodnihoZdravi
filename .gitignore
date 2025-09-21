@@ -1,0 +1,20 @@
+# Ignorovat virtuální prostředí
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Ignorovat dočasné soubory a soubory pro správu balíčků
+bundled_files.txt
+bundle_files.py
+tracked_files_bundle.txt
+
+# Ignorovat specifické soubory s daty, které možná nechcete v Gitu
+data/videos_v1.js
+
+# Můžete ignorovat i celé složky, např. 'node_modules' nebo 'dist'
+# /node_modules
+# /dist

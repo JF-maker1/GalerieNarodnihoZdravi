@@ -1,0 +1,96 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    min-height: 100vh;
+}
+.container {
+    max-width: 960px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+.section-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.topic-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4b5563;
+    border-bottom: 2px solid #a3a3a3; /* Tmavší šedá linka pro podtržení */
+    padding-bottom: 0.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.sub-section-header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #4b5563;
+    border-bottom: 2px solid #16a34a; /* Zelená linka pro podnadpisy */
+    padding-bottom: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+ul.list-disc li {
+    list-style: none;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+ul.list-disc li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #2563eb;
+    border-radius: 50%;
+}
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+#player {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.orange-line {
+    border-bottom: 2px solid #f97316; /* Oranžová linka */
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.blue-line {
+    border-bottom: 2px solid #3b82f6; /* Modrá linka */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.indent-1 {
+    margin-left: 1rem;
+}
