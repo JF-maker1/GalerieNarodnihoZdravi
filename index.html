@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie Národního Zdraví</title>
+    <title>Galerie videí | Národní Zdraví</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-4xl font-bold text-center mb-2">Galerie Národního Zdraví</h1>
+        <h1 class="section-header blue-line">Galerie videí s myšlenkovými mapami</h1>
+        <p class="mb-6">Vyberte si video ze seznamu níže. Po kliknutí se dostanete na stránku s přehrávačem a interaktivní myšlenkovou mapou, která vám umožní snadno přeskakovat na konkrétní témata ve videu.</p>
         
-        <h2 class="text-3xl font-bold text-center mb-6">Galerie videí</h2>
-        <p class="text-center text-gray-600 mb-8">Vyberte si video, které vás zajímá.</p>
-        
-        <div id="video-list" class="space-y-4"></div>
+        <!-- Tento kontejner bude dynamicky naplněn seznamem videí pomocí JavaScriptu -->
+        <div id="video-list" class="space-y-4">
+            <!-- Příklad odkazu, který bude generován:
+            <a href="video.html?id=ID_VIDEA" class="block p-4 bg-gray-100 rounded hover:bg-blue-100">Název videa</a> 
+            -->
+        </div>
     </div>
-
+    
+    <!-- Načtení dat a hlavního skriptu -->
     <script src="data/videos.js"></script>
     <script src="js/main.js" defer></script>
 </body>

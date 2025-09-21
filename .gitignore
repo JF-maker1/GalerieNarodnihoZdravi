@@ -18,3 +18,13 @@ data/videos_v1.js
 # Můžete ignorovat i celé složky, např. 'node_modules' nebo 'dist'
 # /node_modules
 # /dist
+
+# Ignorovat záložní soubory
+css/style_1.css
+index_1.html
+js/main_1.js
+js/player_1.js
+video_1.html
+
+# Ignorovat záložní soubory - fragment kodu
+*_1.*

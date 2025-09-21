@@ -76,7 +76,7 @@ function createPointsList(points, indented = false) {
         link.href = '#';
         link.dataset.start = point.start;
         link.dataset.end = point.end;
-        link.textContent = `${point.text} (${formatTime(point.start)} - ${formatTime(point.end)})`;
+        link.textContent = point.start === null ? point.text : `${point.text} (${formatTime(point.start)} - ${formatTime(point.end)})`;
         listItem.appendChild(link);
         list.appendChild(listItem);
     });
@@ -89,6 +89,7 @@ function createPointsList(points, indented = false) {
  * @returns {string}
  */
 function formatTime(totalSeconds) {
+    if (totalSeconds === null) return '';
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
@@ -106,6 +107,8 @@ function setupClickListeners() {
 
             const startTime = parseFloat(event.currentTarget.getAttribute('data-start'));
             const endTime = parseFloat(event.currentTarget.getAttribute('data-end'));
+
+            if(isNaN(startTime)) return;
 
             player.seekTo(startTime, true);
             player.playVideo();
@@ -166,13 +169,17 @@ function checkVideoTime() {
     
     // Zkontrolujeme, zda máme nastavený koncový čas
     const endTime = player.end;
-    if (typeof endTime !== 'number') return;
+    if (typeof endTime !== 'number' || isNaN(endTime)) return;
 
     stopTimer = setInterval(() => {
         if (player.getCurrentTime() >= endTime) {
-            player.stopVideo();
+            player.pauseVideo();
             clearInterval(stopTimer);
             player.end = null; // Vyčistíme koncový čas
         }
     }, 100);
 }
+
+
+
+

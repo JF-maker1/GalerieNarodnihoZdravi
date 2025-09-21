@@ -90,5 +90,133 @@ const videos = [
                 ]
             }
         ]
+    },
+    {
+        id: 'MTKmY2R-js0',
+        title: 'Myšlenková mapa: Nebezpečí mikroplastu',
+        topics: [
+            {
+                header: 'Hlavní téma: Mikroplastik a jeho nebezpečí pro lidské zdraví',
+                points: [
+                    { text: 'Úvod do problematiky', start: 0, end: 59 }
+                ]
+            },
+            {
+                header: '1. Mikroplastik a jeho charakteristika',
+                points: [
+                    { text: 'Definice mikroplastu', start: 65, end: 73 },
+                    { text: 'Nano-plast jako menší částice', start: 73, end: 77 },
+                    { text: 'Množství plastu konzumovaného týdně', start: 2, end: 6 }
+                ]
+            },
+            {
+                header: '2. Zdroje mikroplastu a cesty jeho příjmu',
+                subsections: [
+                    {
+                        header: 'Zdroje v přírodě a produktech',
+                        points: [
+                            { text: 'V moři, jezerech a řekách', start: 82, end: 86 },
+                            { text: 'V potravinách a vodě', start: 86, end: 88 },
+                            { text: 'V kosmetice a hračkách', start: 96, end: 101 },
+                            { text: 'V pracích prostředcích, lécích a hnojivech', start: 101, end: 105 },
+                            { text: 'V umělých trávnících a omezení EU', start: 106, end: 124 }
+                        ]
+                    },
+                    {
+                        header: 'Cesty příjmu do těla',
+                        points: [
+                            { text: 'Skrze jídlo a pití', start: 187, end: 190 },
+                            { text: 'Vdechování', start: 128, end: 129 },
+                            { text: 'Kontakt s kůží', start: 130, end: 131 }
+                        ]
+                    },
+                    {
+                        header: 'Potravinové zdroje',
+                        points: [
+                            { text: 'Klíčové potraviny s obsahem mikroplastu', start: 252, end: 288 },
+                            { text: 'Sůl a ryby', start: 279, end: 288 },
+                            { text: 'Teflonové pánve', start: 320, end: 327 },
+                            { text: 'Mlýnky na sůl z plastu', start: 301, end: 309 }
+                        ]
+                    },
+                    {
+                        header: 'PFAS ("věčné chemikálie")',
+                        points: [
+                            { text: 'Definice, vlastnosti a použití', start: 210, end: 233 },
+                            { text: 'Stabilita a nerozložitelnost', start: 234, end: 238 }
+                        ]
+                    },
+                    {
+                        header: 'Kosmetické zdroje',
+                        points: [
+                            { text: 'Přítomnost v kosmetice a zubních pastách', start: 328, end: 340 },
+                            { text: 'Označení přírodní kosmetiky a aplikace "Codecheck"', start: 341, end: 351 },
+                            { text: 'Peelingové přípravky', start: 356, end: 362 },
+                            { text: 'Zákaz používání mikroplastů v EU a přechodné období', start: 372, end: 388 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: '3. Vliv mikroplastu na lidský organismus a vědecké důkazy',
+                subsections: [
+                    {
+                        header: 'Italská šokující studie',
+                        points: [
+                            { text: 'Nález mikro a nano plastů v cévách (polyethylen a PVC)', start: 11, end: 36 },
+                            { text: 'Zvýšené riziko úmrtí, infarktu a mrtvice', start: 40, end: 49 },
+                            { text: 'Metodika a výsledky studie', start: 603, end: 709 }
+                        ]
+                    },
+                    {
+                        header: 'Studie z "Chemosphere"',
+                        points: [
+                            { text: 'Potvrzení průniku do buněk', start: 522, end: 534 },
+                            { text: 'Přenos z mateřské buňky na dceřinou', start: 555, end: 588 },
+                            { text: 'Změny v buňkách a možné usnadnění tvorby metastáz', start: 578, end: 586 }
+                        ]
+                    },
+                    {
+                        header: 'Přítomnost v těle',
+                        points: [
+                            { text: 'Nález v plicích, játrech, mateřském mléce a moči', start: 133, end: 152 }
+                        ]
+                    },
+                    {
+                        header: 'Oficiální postoj německých úřadů',
+                        points: [
+                            { text: 'Chybí dlouhodobé studie a standardní data', start: 408, end: 411 },
+                            { text: 'Shromažďování dat a prozatímní stanovisko', start: 436, end: 486 }
+                        ]
+                    },
+                    {
+                        header: 'Problémy s nano-plasty',
+                        points: [
+                            { text: 'Schopnost vázat se na jiné znečišťující látky', start: 490, end: 509 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: '4. Prevence a ochrana',
+                points: [
+                    { text: 'Minimalizace plastových obalů', start: 718, end: 725 },
+                    { text: 'Správné třídění odpadu', start: 728, end: 732 },
+                    { text: 'Používání přírodní kosmetiky', start: 733, end: 742 },
+                    { text: 'Vyhýbání se plastovým lahvím a filtrace vody', start: 755, end: 797 },
+                    { text: 'Používání litinových pánví namísto teflonových', start: 816, end: 836 },
+                    { text: 'Volba přírodních materiálů', start: 806, end: 877 },
+                    { text: 'Výběr pracích prostředků', start: 837, end: 844 }
+                ]
+            },
+            {
+                header: '5. Detoxikace těla',
+                points: [
+                    { text: 'Většina částic je vyloučena, nano-plasty zůstávají', start: 903, end: 914 },
+                    { text: 'Omezené možnosti (krevní dialýza)', start: 915, end: 934 },
+                    { text: 'Shrnutí: Nejúčinnější je prevence', start: 936, end: 943 }
+                ]
+            }
+        ]
     }
 ];
