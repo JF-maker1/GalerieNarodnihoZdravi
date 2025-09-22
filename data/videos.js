@@ -218,5 +218,280 @@ const videos = [
                 ]
             }
         ]
+    },
+    {
+        id: 'kenS3rnWR1I',
+        title: 'Zdravé stárnutí a podpora mitochondrií',
+        topics: [
+            {
+                header: 'Hlavní téma: Zdravé stárnutí a dlouhověkost',
+                subsections: [
+                    {
+                        header: 'Pochopení mitochondrií',
+                        points: [
+                            { text: 'Malé, ale vysoce aktivní buněčné organely', start: 18, end: 24 },
+                            { text: 'Hlavní funkce je tvorba energie ve formě molekuly ATP', start: 25, end: 48 },
+                            { text: 'Zajišťují energii pro každou buňku, zejména ve tkáních s vysokým metabolismem, jako je mozek, svaly a srdce', start: 73, end: 89 }
+                        ]
+                    },
+                    {
+                        header: 'Problém s mitochondriemi ve stáří',
+                        points: [
+                            { text: 'S věkem klesá jejich počet a efektivita', start: 93, end: 99 },
+                            { text: 'Důsledky: méně energie, více oxidativního stresu a vyšší riziko degenerativních onemocnění', start: 99, end: 113 }
+                        ]
+                    },
+                    {
+                        header: 'Mitochondriální dysfunkce urychluje stárnutí',
+                        points: [
+                            { text: 'Nesprávná funkce mitochondrií není jen důsledkem stárnutí, ale aktivně urychluje proces stárnutí', start: 128, end: 137 },
+                            { text: 'Čím hůře fungují mitochondrie, tím rychleji stárne tělo na biologické úrovni', start: 138, end: 147 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: 'Řešení: Jak podpořit mitochondrie a zpomalit stárnutí',
+                subsections: [
+                    {
+                        header: 'Vědecký průlom a NAD+',
+                        points: [
+                            { text: 'Nové studie ukazují, že prekurzory NAD+ mohou výrazně zlepšit funkci mitochondrií ve stárnoucích buňkách', start: 160, end: 168 },
+                            { text: 'Aktivní podpora mitochondrií zpomaluje stárnutí', start: 176, end: 180 }
+                        ]
+                    },
+                    {
+                        header: '1. Pohyb jako lék',
+                        points: [
+                            { text: 'Intenzivní intervalový a silový trénink', start: 224, end: 229 },
+                            { text: 'Patří k nejefektivnějším stimulům pro tvorbu nových mitochondrií (mitochondriální biogenezi)', start: 231, end: 237 },
+                            { text: 'Studie ukazují, že stačí 2-3 cvičení týdně', start: 241, end: 252 }
+                        ]
+                    },
+                    {
+                        header: '2. Kälte a teplo',
+                        points: [
+                            { text: 'Studené sprchy a ledové koupele aktivují hnědou tukovou tkáň, která obsahuje mnoho mitochondrií', start: 260, end: 270 },
+                            { text: 'Saunování uvolňuje proteiny tepelného šoku, které podporují opravu a stabilizaci mitochondrií', start: 275, end: 288 }
+                        ]
+                    },
+                    {
+                        header: '3. Půst',
+                        points: [
+                            { text: 'Půst spouští proces mitofágie, při kterém buňky odbourávají vadné mitochondrie a tvoří prostor pro nové', start: 301, end: 312 },
+                            { text: 'Zmiňován je intervalový půst 16:8 a 24hodinový půst', start: 320, end: 326 }
+                        ]
+                    },
+                    {
+                        header: '4. Mikronutrienty a doplňky stravy',
+                        points: [
+                            { text: 'Důležité látky: hořčík, koenzym Q10, B-vitamíny, alfa-lipoová kyselina, taurin, acetyl-karnitin', start: 338, end: 352 },
+                            { text: 'Koenzym Q10 prokazatelně zvyšuje buněčnou energii, snižuje únavu a oxidační stres', start: 365, end: 391 },
+                            { text: 'NAD+ je klíčový koenzym pro produkci energie v mitochondriích', start: 403, end: 410 },
+                            { text: 'Studie potvrzují, že prekurzory NAD+, jako je NMN (nikotinamid mononukleotid), výrazně zlepšují funkci mitochondrií', start: 412, end: 426 },
+                            { text: 'Další slibné molekuly: resveratrol, PQQ, kreatin', start: 439, end: 468 }
+                        ]
+                    },
+                    {
+                        header: '5. Regenerace a nervový systém',
+                        points: [
+                            { text: 'Hluboký spánek je nezbytný pro buněčné reparační procesy', start: 473, end: 479 },
+                            { text: 'Chronický stres zvyšuje kortizol a vede k poškozování mitochondrií', start: 491, end: 500 },
+                            { text: 'Zvládání stresu je klíčové pro udržení autonomní rovnováhy', start: 501, end: 512 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: 'Závěr: Celostní přístup k dlouhověkosti',
+                points: [
+                    { text: 'Zdravé mitochondrie jsou základem pro dlouhý, aktivní a výkonný život', start: 517, end: 523 },
+                    { text: 'Kombinace cíleného pohybu, teplotních podnětů, mikronutrientů, půstu a zvládání stresu aktivně podporuje funkci mitochondrií a chrání buňky', start: 533, end: 556 }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'affqkxFtAbs',
+        title: 'Svaly – Váš nejsilnější orgán pro samoléčbu a omlazení',
+        topics: [
+            {
+                header: 'Hlavní myšlenka',
+                points: [
+                    { text: 'Svalový aparát je největší žláza v těle, která aktivně produkuje látky pro zdraví a dlouhověkost', start: 25, end: 46 }
+                ]
+            },
+            {
+                header: 'Základní objev a redefinice role svalů',
+                points: [
+                    { text: 'Východisko: Video začíná kvízem, který zpochybňuje běžné vnímání největší žlázy v těle (játra, slinivka)', start: 1, end: 25 },
+                    { text: 'Vědecký průlom: Objev profesorky Bente Klarlund Pedersen, která zkoumala vliv sportu na imunitní systém', start: 53, end: 73 },
+                    { text: 'Klíčové zjištění: Nejen imunitní buňky, ale i samotné svaly produkují imunitu posilující látky (cytokiny)', start: 73, end: 97 },
+                    { text: 'Nová definice: Svaly nejsou jen pro pohyb, ale tvoří největší endokrinní (žlázový) a metabolický orgán v těle', start: 107, end: 118 }
+                ]
+            },
+            {
+                header: 'Myokiny: Poslové ze svalů',
+                points: [
+                    { text: 'Obecný koncept: Svaly produkují nejméně 600 hormonům podobných látek zvaných "myokiny"', start: 118, end: 132 },
+                    { text: 'Mechanismus aktivace: Pohybem vysíláme tyto látky na cestu po celém těle', start: 132, end: 140 }
+                ]
+            },
+            {
+                header: 'Specifické účinky myokinů',
+                subsections: [
+                    {
+                        header: 'Myokin pro mozek: BDNF – "Posilovač mozku"',
+                        points: [
+                            { text: 'Představení: BDNF je jako "hnojivo pro nervové buňky"', start: 146, end: 180 },
+                            { text: 'Funkce: Podporuje učení, paměť, mentální jasnost a zvládání stresu', start: 180, end: 197 },
+                            { text: 'Aktivace: Zvyšuje se především aerobní aktivitou, zejména v oblasti hipokampu (paměťové centrum)', start: 197, end: 212 },
+                            { text: 'Časový efekt: Jednorázový trénink zvyšuje BDNF krátkodobě, pravidelný trénink dlouhodobě', start: 220, end: 231 }
+                        ]
+                    },
+                    {
+                        header: 'Myokin pro metabolismus: Irisin – "Kouzelný umělec"',
+                        points: [
+                            { text: 'Představení: Irisin je hormon pojmenovaný po řecké poselkyni Iris, protože zprostředkovává komunikaci mezi svaly a orgány', start: 249, end: 277 },
+                            { text: 'Funkce 1: Podporuje spalování tuků', start: 277, end: 280 },
+                            { text: 'Funkce 2: Chrání mozek (pomáhá zvyšovat BDNF)', start: 280, end: 284 },
+                            { text: 'Funkce 3: Přeměňuje bílý (zásobní) tuk na hnědý (termogenní) tuk, což zvyšuje energetický výdej i v klidu', start: 284, end: 293 },
+                            { text: 'Další funkce: Chrání před Alzheimerovou chorobou a zlepšuje náladu', start: 303, end: 308 },
+                            { text: 'Aktivace: Zvláště účinný je pohyb v chladu a silový trénink', start: 312, end: 317 }
+                        ]
+                    },
+                    {
+                        header: 'Myokin pro zánět: Interleukin-6 – "Sportovní faktor"',
+                        points: [
+                            { text: 'Dvojí povaha: Má dvě tváře', start: 373, end: 376 },
+                            { text: '"Špatná tvář": Při stresu a infekci je produkován imunitními buňkami a podporuje zánět (proto se nemá cvičit při nemoci)', start: 376, end: 399 },
+                            { text: '"Dobrá tvář": Při sportu je produkován svaly a působí protizánětlivě proti tichým, chronickým zánětům', start: 399, end: 411 },
+                            { text: 'Další funkce: Pomáhá nastartovat spalování tuků', start: 417, end: 419 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: 'Výzva: Problém úbytku svalové hmoty (Sarkopenie)',
+                points: [
+                    { text: 'Popis problému: Od 30. roku života svalová hmota ubývá', start: 473, end: 481 },
+                    { text: 'Zrychlení procesu: Po 50. roce života ztrácíme ročně 1 % svalové hmoty', start: 481, end: 484 },
+                    { text: 'Důsledek: V 80 letech můžeme mít o 40 % méně svalů, pokud aktivně nezasáhneme', start: 488, end: 498 }
+                ]
+            },
+            {
+                header: 'Praktická řešení a tipy pro každodenní život',
+                points: [
+                    { text: 'Zdůraznění nutnosti: Důležité je nejen vytrvalostní, ale i silové cvičení', start: 498, end: 503 },
+                    { text: 'Podpůrná myšlenka: I lehká aktivita (30 min denně) výrazně snižuje riziko smrtelného infarktu', start: 431, end: 448 }
+                ],
+                subsections: [
+                    {
+                        header: 'Tip 1: Schody jako přítel',
+                        points: [
+                            { text: 'Jedno patro vyjité po schodech prodlužuje život o minutu', start: 566, end: 572 }
+                        ]
+                    },
+                    {
+                        header: 'Tip 2: 8000 kroků denně',
+                        points: [
+                            { text: 'Podle Harvardu snižuje riziko infarktu o 50 %', start: 577, end: 590 },
+                            { text: 'Doporučení: Pořiďte si krokoměr a v případě potřeby večer doplňte chybějící kroky', start: 590, end: 597 }
+                        ]
+                    },
+                    {
+                        header: 'Tip 3: 3 minuty intenzivního tepu denně',
+                        points: [
+                            { text: 'Výmluva "není čas" neplatí; stačí krátké, intenzivní intervaly', start: 597, end: 606 },
+                            { text: 'Příklady: Běh na místě nebo 10-20 dřepů, které lze provést kdekoli, i v kanceláři', start: 612, end: 624 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: 'Další souvislosti',
+                points: [
+                    { text: 'Účinek pohybu není izolovaný; záleží také na výživě, spánku a úrovni stresu', start: 317, end: 328 },
+                    { text: 'Různé konstituční typy mohou na stejný podnět reagovat odlišně', start: 331, end: 340 },
+                    { text: 'Nabídka testu konstitučního typu pro personalizaci životního stylu', start: 340, end: 367 }
+                ]
+            }
+        ]
+    },
+    // NOVĚ PŘIDANÉ VIDEO ZAČÍNÁ ZDE
+    {
+        id: 'gAFDh_WTp_A',
+        title: 'Problémy s průmyslovou mléčnou výrobou a jejich řešení',
+        topics: [
+            {
+                header: 'Identifikace problému: Průmyslová mlékárenská výroba',
+                subsections: [
+                    {
+                        header: 'Problém se zpracováním mléka',
+                        points: [
+                            { text: 'Pasterizace: Ničí enzymy, vitamíny a prospěšné bakterie', start: 50, end: 75 },
+                            { text: 'Homogenizace: Rozkládá tukové molekuly, které se ukládají v tepnách', start: 77, end: 96 }
+                        ]
+                    },
+                    {
+                        header: 'Problém s chovem krav',
+                        points: [
+                            { text: 'Hormony: Používání růstových hormonů vede k vyššímu riziku rakoviny prostaty a prsu', start: 98, end: 145 },
+                            { text: 'Mýtus o vápníku: Mléko paradoxně odvápňuje kosti, což vede k vyššímu výskytu osteoporózy', start: 145, end: 189 },
+                            { text: 'Antibiotika: Používání antibiotik v chovu končí v mléce a ničí střevní mikroflóru', start: 190, end: 212 }
+                        ]
+                    },
+                    {
+                        header: 'Problém s ostatními mléčnými produkty',
+                        points: [
+                            { text: 'Jiné mléčné produkty: Jsou často ještě horší než samotné mléko', start: 235, end: 240 },
+                            { text: 'Joghurt: Obsahuje nadbytek cukru a průmyslové probiotické kultury jsou často nefunkční', start: 242, end: 273 },
+                            { text: 'Sýr: Koncentruje desetkrát více hormonů a antibiotik než mléko', start: 291, end: 308 },
+                            { text: 'Mléčný prášek: Obsahuje oxidovaný cholesterol, který poškozuje tepny', start: 320, end: 340 },
+                            { text: 'Laktóza-free produkty: Neřeší skutečné problémy mléka jako jsou hormony a antibiotika', start: 342, end: 362 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: 'Korupce mlékárenského průmyslu',
+                points: [
+                    { text: 'Průmysl financuje studie a ovlivňuje učebnice lékařů', start: 212, end: 232 },
+                    { text: 'Vědecké studie prokazující škodlivost mléka jsou ignorovány', start: 365, end: 402 }
+                ]
+            },
+            {
+                header: 'Biologický argument: Mléko je pro telata, ne pro lidi',
+                points: [
+                    { text: 'Mléko je přirozeně navrženo k tomu, aby tele z 50 kg vyrostlo na 700 kg', start: 421, end: 436 },
+                    { text: 'Laktózová intolerance není nemoc, ale přirozený stav pro většinu dospělých lidí', start: 440, end: 470 }
+                ]
+            },
+            {
+                header: 'Řešení: Opravdové mléčné produkty a alternativy',
+                subsections: [
+                    {
+                        header: 'Opravdu zdravé "mléčné" produkty',
+                        points: [
+                            { text: 'Syrové mléko: Nepasterizované, neošetřené, s živými enzymy a bakteriemi', start: 478, end: 515 },
+                            { text: 'Pravý Kefír: Vyráběný z živých kultur, opravuje střevní flóru a posiluje imunitu', start: 515, end: 553 },
+                            { text: 'Ghee (ghí): Čistý tuk bez mléčných bílkovin a laktózy, podporuje trávení a spalování tuků', start: 556, end: 574 },
+                            { text: 'Sýr ze syrového mléka: Obsahuje vitamín K2, který směřuje vápník do kostí místo do tepen', start: 576, end: 595 },
+                            { text: 'Kolostrum (mlezivo): Nejsilnější přírodní lék plný protilátek a růstových faktorů', start: 600, end: 618 }
+                        ]
+                    },
+                    {
+                        header: 'Konkrétní akční plán pro diváka',
+                        points: [
+                            { text: 'Okamžitá akce: Vyhoďte všechny průmyslové mléčné výrobky z lednice', start: 619, end: 628 },
+                            { text: 'Zdravá volba: Hledejte syrové mléko u farmáře', start: 628, end: 637 },
+                            { text: 'Domácí výroba: Naučte se doma vyrábět Kefír a Ghee', start: 639, end: 655 },
+                            { text: 'Alternativy: Pokud nemáte přístup k syrovému mléku, zvolte rostlinné mléko', start: 670, end: 677 },
+                            { text: 'Vyhněte se rizikům: Rostlinné mléko si raději vyrobte sami, abyste se vyhnuli cukru a aditivům', start: 680, end: 690 }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ];
