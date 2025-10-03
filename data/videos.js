@@ -493,5 +493,83 @@ const videos = [
                 ]
             }
         ]
+    },
+    {
+        id: 's1YKQkAdgOw',
+        title: 'Cesta ke zdraví skrze stravu',
+        topics: [
+            {
+                header: 'Ústřední myšlenka',
+                points: [
+                    { text: 'Jídlo je lék, ne jen palivo', start: 29, end: 43 }
+                ]
+            },
+            {
+                header: 'Vstupní teze',
+                points: [
+                    { text: 'Příběh pacienta s rizikem cukrovky a srdečních chorob demonstruje, jak může zanedbávání stravy vést k vážným zdravotním problémům navzdory vnějšímu zdání zdraví.', start: 0, end: 29 }
+                ]
+            },
+            {
+                header: 'Řešení a výsledek',
+                points: [
+                    { text: 'Jednoduchý plán založený na 10 základních potravinách vedl k úplnému zvrácení negativního zdravotního trendu a obnovení energie.', start: 43, end: 72 }
+                ]
+            },
+            {
+                header: 'Základní princip',
+                points: [
+                    { text: 'Co mají zdravé potraviny společného?', start: 920, end: 1251 }
+                ],
+                subsections: [
+                    {
+                        header: 'Vlastnosti zdravých potravin',
+                        points: [
+                            { text: 'Jsou nezpracované a celistvé – Existují v takové podobě, jak je příroda vytvořila, a zachovávají si tak všechny živiny.', start: 940, end: 978 },
+                            { text: 'Mají nízký obsah sacharidů – Chrání před metabolickými onemocněními, jako je inzulínová rezistence.', start: 1034, end: 1063 },
+                            { text: 'Obsahují zdravé, přírodní tuky – Tělo je potřebuje a miluje pro správnou funkci buněk.', start: 1063, end: 1113 },
+                            { text: 'Mají nízký obsah prozánětlivých omega-6 tuků – Na rozdíl od průmyslových rostlinných olejů.', start: 1143, end: 1204 }
+                        ]
+                    },
+                    {
+                        header: 'Hlavní myšlenka',
+                        points: [
+                            { text: 'Jíst zdravé potraviny znamená automaticky nahradit a vyloučit ty škodlivé (zpracované, plné cukru a prozánětlivých olejů).', start: 1210, end: 1251 }
+                        ]
+                    }
+                ]
+            },
+            {
+                header: 'Praktická aplikace: 10 pilířů zdravého jídelníčku',
+                subsections: [
+                    {
+                        header: 'Skupina 1: Zdravé tuky jako základ',
+                        points: [
+                            { text: 'Extra panenský olivový olej: Snižuje riziko srdečních chorob a zánětů.', start: 77, end: 207 },
+                            { text: 'Avokádo: Zdroj mononenasycených tuků, draslíku a rozpustné vlákniny.', start: 1501, end: 1688 },
+                            { text: 'Ořechy a semena: Stabilizují cukr v krvi, jsou bohaté na minerály a antioxidanty.', start: 516, end: 693 }
+                        ]
+                    },
+                    {
+                        header: 'Skupina 2: Koncentrované živiny z živočišných zdrojů',
+                        points: [
+                            { text: 'Hovězí játra (z pastevního chovu): "Přírodní multivitamin" plný železa, vitamínu A a vitamínů skupiny B.', start: 207, end: 313 },
+                            { text: 'Vejce (z pastevního chovu): Zdroj cholinu, vitamínu K2 a vysoce vstřebatelných bílkovin.', start: 693, end: 920 },
+                            { text: 'Divoký losos: Nejbohatší zdroj protizánětlivých omega-3 mastných kyselin (EPA a DHA).', start: 1357, end: 1501 }
+                        ]
+                    },
+                    {
+                        header: 'Skupina 3: Síla rostlinných mikronutrientů a vlákniny',
+                        points: [
+                            { text: 'Fermentovaná zelenina: Zdroj probiotik pro zdravý střevní mikrobiom a silnou střevní bariéru.', start: 313, end: 395 },
+                            { text: 'Česnek: Podporuje krevní oběh (díky alicinu) a působí antibakteriálně.', start: 395, end: 516 },
+                            { text: 'Bobule (ostružiny, maliny, borůvky): "Bonbónky přírody" plné antioxidantů s nízkým obsahem cukru.', start: 1251, end: 1357 },
+                            { text: 'Neškrobová a listová zelenina: "Přírodní multivitamin" s vysokým obsahem vlákniny, podporující detoxikaci.', start: 1688, end: 1881 }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ];
+
