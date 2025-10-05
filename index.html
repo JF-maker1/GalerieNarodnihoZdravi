@@ -7,25 +7,34 @@
       href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       target="_blank"
     >
-      Načítám název videa...
+      Načítám název a počet zhlédnutí videa...
     </a>
 
     <script>
       (async () => {
         const apiKey = 'AIzaSyCF-gaw62KFl5VUcxE6EEjbk4UDdUb90_E'; // <-- Vložte sem svůj API klíč!
         const videoId = 'dQw4w9WgXcQ';
-        const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`;
+        
+        // ZMĚNA 1: Požadujeme i statistiky (počet zhlédnutí)
+        const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`;
+        
         const videoLinkElement = document.getElementById('youtube-link');
 
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
-          const videoTitle = data.items[0].snippet.title;
+          const videoInfo = data.items[0];
 
-          if (videoTitle) {
-            videoLinkElement.textContent = videoTitle;
+          const videoTitle = videoInfo.snippet.title;
+          
+          // ZMĚNA 2: Získáme počet zhlédnutí a naformátujeme ho pro lepší čitelnost
+          const viewCount = Number(videoInfo.statistics.viewCount).toLocaleString('cs-CZ');
+
+          if (videoTitle && viewCount) {
+            // ZMĚNA 3: Spojíme název a počet zhlédnutí do jednoho textu
+            videoLinkElement.textContent = `${videoTitle} (${viewCount} zhlédnutí)`;
           } else {
-            videoLinkElement.textContent = 'Název videa se nepodařilo načíst.';
+            videoLinkElement.textContent = 'Informace o videu se nepodařilo načíst.';
           }
         } catch (error) {
           console.error('Došlo k chybě:', error);
