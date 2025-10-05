@@ -2,8 +2,36 @@
 <html>
   <body>
     <h1>Hello world!</h1>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-      Zobrazit video na YouTube
+    <a
+      id="youtube-link"
+      href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      target="_blank"
+    >
+      Načítám název videa...
     </a>
+
+    <script>
+      (async () => {
+        const apiKey = 'AIzaSyCF-gaw62KFl5VUcxE6EEjbk4UDdUb90_E'; // <-- Vložte sem svůj API klíč!
+        const videoId = 'dQw4w9WgXcQ';
+        const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`;
+        const videoLinkElement = document.getElementById('youtube-link');
+
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          const videoTitle = data.items[0].snippet.title;
+
+          if (videoTitle) {
+            videoLinkElement.textContent = videoTitle;
+          } else {
+            videoLinkElement.textContent = 'Název videa se nepodařilo načíst.';
+          }
+        } catch (error) {
+          console.error('Došlo k chybě:', error);
+          videoLinkElement.textContent = 'Chyba při načítání videa.';
+        }
+      })();
+    </script>
   </body>
 </html>
