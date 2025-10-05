@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přehrávač videa</title>
+    
+    <!-- Titulek stránky se změní pomocí JavaScriptu -->
+    <title>Načítám video... | Galerie videí</title>
+    
+    <!-- Načtení Tailwind CSS pro základní utility (použito v původním designu) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Link na upravené styly -->
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="video-page">
-      <!-- Navigace zpět -->
-      <div class="back-link">
-        <a href="index.html">← Zpět na seznam videí</a>
-      </div>
-      
-      <!-- Informace o videu -->
-      <div id="video-info">
-        <h1 id="video-title">Načítám video...</h1>
-      </div>
-      
-      <!-- YouTube přehrávač -->
-      <div class="video-container">
-        <div id="video-player"></div>
-      </div>
-      
-      <!-- Další detaily -->
-      <div id="video-details"></div>
+</head>
+<body>
+    <div class="container">
+        <!-- Odkaz zpět na hlavní galerii -->
+        <a href="index.html" class="inline-block mb-4 text-blue-600 hover:underline">&larr; Zpět na galerii</a>
+
+        <!-- Nadpis stránky, který bude naplněn názvem videa -->
+        <h1 id="page-title" class="text-3xl font-bold text-center mb-6">Načítám informace o videu...</h1>
+
+        <!-- Přehrávač a kontejnery pro dynamický obsah -->
+        <div id="player-container">
+            <div id="player"></div>
+        </div>
+        
+        <!-- Tento kontejner bude naplněn tématy a časovými značkami z datového souboru -->
+        <div id="topics-container" class="space-y-4">
+            <!-- Obsah bude vygenerován dynamicky pomocí video.js -->
+        </div>
     </div>
     
+    <!-- Načtení skriptu pro přehrávač -->
     <script src="video.js"></script>
-  </body>
+    
+    <!-- Načtení YouTube IFrame API, které je potřeba pro ovládání přehrávače -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
 </html>

@@ -1,187 +1,209 @@
-(async () => {
-  const apiKey = 'AIzaSyCF-gaw62KFl5VUcxE6EEjbk4UDdUb90_E';
-  
-  // Získání video ID z URL parametru
-  const urlParams = new URLSearchParams(window.location.search);
-  const videoId = urlParams.get('id');
-  
-  if (!videoId) {
-    document.getElementById('video-title').textContent = 'Chyba: Video ID nebylo zadáno';
-    document.getElementById('video-player').innerHTML = '<p>Chybí parametr video ID v URL.</p>';
-    return;
-  }
-  
-  try {
-    // 1️⃣ Načtení informací z našeho JSON souboru
-    const videosResponse = await fetch('data/videos.json');
-    const { videos } = await videosResponse.json();
-    const localVideo = videos.find(v => v.id === videoId);
-    
-    // 2️⃣ Načtení detailů z YouTube API
-    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`;
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    
-    if (data.items && data.items.length > 0) {
-      const video = data.items[0];
-      const { snippet, statistics } = video;
-      
-      // Použijeme český název, pokud existuje
-      const title = (localVideo?.czTitle && localVideo.czTitle.trim() !== '') 
-        ? localVideo.czTitle 
-        : snippet.title;
-      
-      // 3️⃣ Zobrazení názvu
-      document.getElementById('video-title').textContent = title;
-      document.title = `${title} - Přehrávač videa`;
-      
-      // 4️⃣ Vložení YouTube přehrávače (iframe)
-      const playerHtml = `
-        <iframe 
-          id="youtube-iframe"
-          width="100%" 
-          height="100%" 
-          src="https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      `;
-      document.getElementById('video-player').innerHTML = playerHtml;
-      
-      // 5️⃣ Zobrazení dalších informací
-      const viewCount = Number(statistics.viewCount).toLocaleString('cs-CZ');
-      const likeCount = statistics.likeCount 
-        ? Number(statistics.likeCount).toLocaleString('cs-CZ') 
-        : 'N/A';
-      
-      let detailsHtml = `
-        <div class="video-stats">
-          <p><strong>Zhlédnutí:</strong> ${viewCount}</p>
-          <p><strong>Líbí se:</strong> ${likeCount}</p>
-          <p><strong>Originální název:</strong> ${snippet.title}</p>
-        </div>
-      `;
-      
-      // 6️⃣ Zobrazení strukturovaného obsahu, pokud existuje
-      if (localVideo?.topics && localVideo.topics.length > 0) {
-        detailsHtml += renderTopics(localVideo.topics);
-      }
-      
-      document.getElementById('video-details').innerHTML = detailsHtml;
-      
-      // 7️⃣ Přidání event listenerů pro časové odkazy
-      addTimeStampListeners();
-      
-    } else {
-      document.getElementById('video-title').textContent = 'Video nebylo nalezeno';
-      document.getElementById('video-player').innerHTML = '<p>Video s tímto ID neexistuje.</p>';
-    }
-    
-  } catch (error) {
-    console.error('Došlo k chybě:', error);
-    document.getElementById('video-title').textContent = 'Chyba při načítání videa';
-    document.getElementById('video-player').innerHTML = '<p>Nepodařilo se načíst video.</p>';
-  }
-})();
+// --- Globální proměnné ---
+var player;
+var stopTimer = null;
+let currentVideoId = null;
 
-/**
- * Vykreslí strukturovaný obsah videa
- */
-function renderTopics(topics) {
-  let html = '<div class="video-content-structure"><h2>Obsah videa</h2>';
-  
-  topics.forEach((topic, topicIndex) => {
-    html += `<div class="topic">`;
-    html += `<h3 class="topic-header">${topic.header}</h3>`;
-    
-    // Pokud má topic přímé body
-    if (topic.points && topic.points.length > 0) {
-      html += '<ul class="topic-points">';
-      topic.points.forEach((point, pointIndex) => {
-        html += renderPoint(point, topicIndex, pointIndex);
-      });
-      html += '</ul>';
+// --- Hlavní spouštěcí logika ---
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Získání ID videa z URL adresy
+    const urlParams = new URLSearchParams(window.location.search);
+    currentVideoId = urlParams.get('id');
+
+    if (!currentVideoId) {
+        document.getElementById('page-title').textContent = 'Video nebylo nalezeno: chybí ID.';
+        return;
     }
-    
-    // Pokud má topic podsekce
-    if (topic.subsections && topic.subsections.length > 0) {
-      topic.subsections.forEach((subsection, subsectionIndex) => {
-        html += `<div class="subsection">`;
-        html += `<h4 class="subsection-header">${subsection.header}</h4>`;
-        
-        if (subsection.points && subsection.points.length > 0) {
-          html += '<ul class="topic-points">';
-          subsection.points.forEach((point, pointIndex) => {
-            html += renderPoint(point, topicIndex, pointIndex, subsectionIndex);
-          });
-          html += '</ul>';
+
+    try {
+        // 2. Načtení dat z JSON souboru
+        const response = await fetch('data/videos.json');
+        const { videos } = await response.json();
+        const videoData = videos.find(video => video.id === currentVideoId);
+
+        // 3. Pokud data najdeme, spustíme vykreslení stránky
+        if (videoData) {
+            renderPage(videoData);
+        } else {
+            document.getElementById('page-title').textContent = 'Video nebylo nalezeno v databázi.';
         }
+    } catch (error) {
+        console.error("Chyba při načítání video dat:", error);
+        document.getElementById('page-title').textContent = 'Chyba při načítání dat.';
+    }
+});
+
+
+/**
+ * Vykreslí celý obsah stránky podle dat konkrétního videa.
+ * @param {object} videoData - Objekt s informacemi o videu.
+ */
+function renderPage(videoData) {
+    // Použijeme český název, pokud existuje, jinak originální
+    const title = (videoData.czTitle && videoData.czTitle.trim() !== '') 
+        ? videoData.czTitle 
+        : videoData.title;
+
+    // Nastavení titulku stránky a hlavního nadpisu
+    document.title = `${title} | Galerie videí`;
+    document.getElementById('page-title').textContent = title;
+
+    const topicsContainer = document.getElementById('topics-container');
+    topicsContainer.innerHTML = ''; // Vyčistíme kontejner
+
+    // Projdeme všechna témata a vytvoříme pro ně HTML
+    videoData.topics.forEach(topic => {
+        const topicHeader = document.createElement('h2');
+        topicHeader.className = 'topic-header orange-line';
+        topicHeader.textContent = topic.header;
+        topicsContainer.appendChild(topicHeader);
+
+        if (topic.points) {
+            topicsContainer.appendChild(createPointsList(topic.points));
+        }
+
+        if (topic.subsections) {
+            topic.subsections.forEach(sub => {
+                const subHeader = document.createElement('div');
+                subHeader.className = 'sub-section-header indent-1';
+                subHeader.textContent = sub.header;
+                topicsContainer.appendChild(subHeader);
+                topicsContainer.appendChild(createPointsList(sub.points, true));
+            });
+        }
+    });
+
+    // Po vykreslení všech odkazů na ně navážeme posluchače událostí
+    setupClickListeners();
+}
+
+/**
+ * Vytvoří a vrátí <ul> element se seznamem časových značek.
+ * @param {Array} points - Pole objektů s body tématu.
+ * @param {boolean} indented - Zda má být seznam odsazený.
+ * @returns {HTMLUListElement}
+ */
+function createPointsList(points, indented = false) {
+    const list = document.createElement('ul');
+    list.className = 'list-disc ml-4';
+    if (indented) {
+        list.classList.add('indent-1');
+    }
+
+    points.forEach(point => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#';
+        link.dataset.start = point.start;
+        link.dataset.end = point.end;
         
-        html += '</div>';
-      });
+        const timeText = (point.start !== null && point.end !== null)
+            ? `(${formatTime(point.start)} - ${formatTime(point.end)})`
+            : '';
+
+        link.textContent = `${point.text} ${timeText}`.trim();
+        listItem.appendChild(link);
+        list.appendChild(listItem);
+    });
+    return list;
+}
+
+/**
+ * Pomocná funkce pro formátování sekund na formát M:SS.
+ * @param {number} totalSeconds - Celkový počet sekund.
+ * @returns {string}
+ */
+function formatTime(totalSeconds) {
+    if (totalSeconds === null || typeof totalSeconds === 'undefined') return '';
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+/**
+ * Najde všechny odkazy s časovými značkami a přidá jim event listener pro ovládání videa.
+ */
+function setupClickListeners() {
+    const jumpLinks = document.querySelectorAll('a[data-start]');
+    jumpLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (!player) return;
+
+            const startTime = parseFloat(event.currentTarget.getAttribute('data-start'));
+            const endTime = parseFloat(event.currentTarget.getAttribute('data-end'));
+
+            if (isNaN(startTime)) return;
+
+            player.seekTo(startTime, true);
+            player.playVideo();
+            // Uložíme si koncový čas do vlastní vlastnosti přehrávače
+            player.end = endTime; 
+        });
+    });
+}
+
+
+// --- YOUTUBE IFRAME PLAYER API ---
+
+/**
+ * Tato funkce se zavolá automaticky po načtení YouTube API.
+ * Je volána globálně, proto nesmí být uvnitř jiné funkce.
+ */
+function onYouTubeIframeAPIReady() {
+    if (!currentVideoId) return;
+
+    player = new YT.Player('player', {
+        height: '315',
+        width: '560',
+        videoId: currentVideoId,
+        playerVars: { 'controls': 1, 'autoplay': 0 },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+/**
+ * Zavolá se, když je přehrávač připraven.
+ */
+function onPlayerReady(event) {
+    // Zde není potřeba žádná akce, ale funkce musí existovat.
+}
+
+/**
+ * API zavolá tuto funkci, když se změní stav přehrávače.
+ */
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        // Pokud video hraje, začneme kontrolovat čas
+        checkVideoTime();
+    } else {
+        // Pokud se zastaví, zrušíme časovač
+        if (stopTimer) {
+            clearInterval(stopTimer);
+        }
+    }
+}
+
+/**
+ * Kontroluje, zda video nepřesáhlo koncový čas a případně ho zastaví.
+ */
+function checkVideoTime() {
+    if (stopTimer) {
+        clearInterval(stopTimer);
     }
     
-    html += '</div>';
-  });
-  
-  html += '</div>';
-  return html;
-}
+    // Zkontrolujeme, zda máme nastavený koncový čas
+    const endTime = player.end;
+    if (typeof endTime !== 'number' || isNaN(endTime)) return;
 
-/**
- * Vykreslí jednotlivý bod s časovou značkou
- */
-function renderPoint(point, topicIndex, pointIndex, subsectionIndex = null) {
-  const hasTimestamp = point.start !== null && point.start !== undefined;
-  
-  let html = '<li class="topic-point">';
-  
-  if (hasTimestamp) {
-    const timeStr = formatTime(point.start);
-    html += `<span class="timestamp" data-time="${point.start}">${timeStr}</span> `;
-  }
-  
-  html += `<span class="point-text">${point.text}</span>`;
-  html += '</li>';
-  
-  return html;
-}
-
-/**
- * Převede sekundy na formát MM:SS
- */
-function formatTime(seconds) {
-  const mins = Math.floor(seconds / 60);
-  const secs = seconds % 60;
-  return `${mins}:${secs.toString().padStart(2, '0')}`;
-}
-
-/**
- * Přidá event listenery pro klikání na časové značky
- */
-function addTimeStampListeners() {
-  const timestamps = document.querySelectorAll('.timestamp');
-  
-  timestamps.forEach(timestamp => {
-    timestamp.addEventListener('click', function() {
-      const time = parseInt(this.getAttribute('data-time'));
-      seekToTime(time);
-    });
-  });
-}
-
-/**
- * Přesune video na určitý čas
- */
-function seekToTime(seconds) {
-  const iframe = document.getElementById('youtube-iframe');
-  if (iframe && iframe.contentWindow) {
-    // Použití YouTube IFrame API pro přesun na čas
-    iframe.contentWindow.postMessage(JSON.stringify({
-      event: 'command',
-      func: 'seekTo',
-      args: [seconds, true]
-    }), '*');
-  }
+    stopTimer = setInterval(() => {
+        if (player.getCurrentTime() >= endTime) {
+            player.pauseVideo();
+            clearInterval(stopTimer);
+            // Vyčistíme koncový čas, aby další přehrávání nebylo ovlivněno
+            player.end = null; 
+        }
+    }, 100);
 }

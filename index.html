@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Galerie videí o zdraví z Youtube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie videí | Národní Zdraví</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Galerie videí o zdraví z Youtube</h1>
-    <div id="video-list">
-      <p>Načítám seznam videí z YouTube...</p>
+
+    <!-- Styly specifické pro grafický nadpis, přesunuto sem pro shodu s originálem -->
+    <style>
+      .underline-heading-1, .underline-heading-2 {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+      }
+      .underline-heading-1::before {
+        content: '';
+        height: 2px;
+        width: 50px;
+        background-color: #1e40af;
+      }
+      .underline-heading-2::before {
+        content: '';
+        height: 2px;
+        width: 50px;
+        background-color: #166534;
+      }
+      .underline-heading-1 .line, .underline-heading-2 .line {
+        width: 10px; 
+        height: 2px;
+      }
+      .underline-heading-1 .line { background-color: #1e40af; }
+      .underline-heading-2 .line { background-color: #166534; }
+      .underline-heading-1 .word,
+      .underline-heading-2 .word {
+        white-space: nowrap; 
+      }
+      .underline-heading-1 .end-line, .underline-heading-2 .end-line {
+        flex-grow: 1;
+        height: 2px;
+      }
+      .underline-heading-1 .end-line { background-color: #1e40af; }
+      .underline-heading-2 .end-line { background-color: #166534; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="text-4xl text-blue-800 mb-0 underline-heading-1">
+            <span class="word">Galerie</span>
+            <span class="end-line"></span>
+        </div>
+
+        <div class="text-1xl text-blue-800 mb-0 underline-heading-1">
+            <span class="word">Národního</span>
+            <span class="end-line"></span>
+        </div>
+
+        <div class="text-5xl text-blue-800 mb-0 underline-heading-1">
+            <span class="word">Zdraví</span>
+            <span class="end-line"></span>
+        </div>
+
+        <div class="text-1xl text-green-600 mb-1 underline-heading-2">
+            <span class="word">Galerie</span>
+            <span class="line"></span>
+            <span class="word">videí</span>
+            <span class="line"></span>
+            <span class="word">o</span>
+            <span class="line"></span>
+            <span class="word">zdraví</span>
+            <span class="line"></span>
+            <span class="word">z</span>
+            <span class="line"></span>
+            <span class="word">Youtube</span>
+            <span class="end-line"></span>
+        </div>
+
+        <div id="video-list" class="ml-0 mt-8 space-y-2">
+            <!-- Seznam videí bude dynamicky vložen pomocí script.js -->
+        </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
+
