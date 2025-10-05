@@ -1,11 +1,32 @@
 {
-  "videoIds": [
-    "dQw4w9WgXcQ",
-    "0FqlQG6Oe14",
-    "MTKmY2R-js0",
-    "kenS3rnWR1I",
-    "affqkxFtAbs",
-    "gAFDh_WTp_A",
-    "s1YKQkAdgOw"
+  "videos": [
+    {
+      "id": "dQw4w9WgXcQ",
+      "czTitle": "Rick Astley - Nikdy tě neopustím"
+    },
+    {
+      "id": "0FqlQG6Oe14",
+      "czTitle": "Detoxikace mikroplastů a těžkých kovů"
+    },
+    {
+      "id": "MTKmY2R-js0",
+      "czTitle": "Nebezpečí mikroplastu"
+    },
+    {
+      "id": "kenS3rnWR1I",
+      "czTitle": "Zdravé stárnutí a podpora mitochondrií"
+    },
+    {
+      "id": "affqkxFtAbs",
+      "czTitle": "Svaly – Váš nejsilnější orgán pro samoléčbu a omlazení"
+    },
+    {
+      "id": "gAFDh_WTp_A",
+      "czTitle": "Problémy s průmyslovou mléčnou výrobou a jejich řešení"
+    },
+    {
+      "id": "s1YKQkAdgOw",
+      "czTitle": "Cesta ke zdraví skrze stravu"
+    }
   ]
 }

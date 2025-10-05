@@ -5,10 +5,13 @@
   try {
     // 1️⃣ Načtení seznamu videí z JSON souboru
     const videosResponse = await fetch('data/videos.json');
-    const { videoIds } = await videosResponse.json();
+    const { videos } = await videosResponse.json();
+
+    // Extrakce pouze ID pro API volání
+    const videoIds = videos.map(v => v.id);
+    const idString = videoIds.join(',');
 
     // 2️⃣ Sestavení URL pro YouTube API
-    const idString = videoIds.join(',');
     const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${idString}&key=${apiKey}`;
 
     // 3️⃣ Načtení dat o videích
@@ -21,7 +24,15 @@
 
       data.items.forEach(video => {
         const { id, snippet, statistics } = video;
-        const title = snippet.title;
+        
+        // Najdeme odpovídající záznam v našem JSON
+        const localVideo = videos.find(v => v.id === id);
+        
+        // Použijeme český název, pokud existuje, jinak původní z YouTube
+        const title = (localVideo?.czTitle && localVideo.czTitle.trim() !== '') 
+          ? localVideo.czTitle 
+          : snippet.title;
+        
         const viewCount = Number(statistics.viewCount).toLocaleString('cs-CZ');
         const videoUrl = `https://www.youtube.com/watch?v=${id}`;
 
