@@ -1,0 +1,223 @@
+{
+  "videos": [
+    {
+      "id": "0FqlQG6Oe14",
+      "czTitle": "Detoxikace mikroplastů a těžkých kovů",
+      "topics": [
+        {
+          "header": "Klíčový prostředek: Chitosan",
+          "points": [
+            { "text": "Vychází z chitinu (biopolymer z exoskeletu korýšů)", "start": 42, "end": 76 },
+            { "text": "Chitin je nestravitelný", "start": 79, "end": 93 },
+            { "text": "Chitosan je derivát chitinu, získaný chemickou modifikací, což zvyšuje jeho rozpustnost a aktivitu", "start": 94, "end": 124 },
+            { "text": "Ve videu zmíněn speciální chitosan z hlívy ústřičné (Pleurotus ostreatus) jako čistší alternativa bez kontaminace", "start": 652, "end": 675 }
+          ]
+        },
+        {
+          "header": "Mechanismus účinku",
+          "points": [
+            { "text": "Vazba škodlivin: Funguje jako bipolární vláknina, která váže jak hydrofilní, tak hydrofobní látky", "start": 125, "end": 141 },
+            { "text": "Vytváří nevstřebatelné komplexy se škodlivinami, které jsou následně vyloučeny z těla", "start": 135, "end": 141 },
+            { "text": "Primární detoxikace: Váže mikroplasty a těžké kovy, které se často spojují", "start": 155, "end": 167 },
+            { "text": "In vitro testy potvrzují schopnost vázat plasty", "start": 357, "end": 365 },
+            { "text": "Využití v čištění odpadních vod", "start": 171, "end": 192 }
+          ]
+        },
+        {
+          "header": "Účinky na organismus a léčebný potenciál",
+          "subsections": [
+            {
+              "header": "Trávicí systém:",
+              "points": [
+                { "text": "Váže žlučové kyseliny, což podporuje jejich vyšší tvorbu a detoxikaci jater", "start": 213, "end": 236 },
+                { "text": "Působí jako prebiotikum, podporuje diverzitu a obnovu střevního mikrobiomu", "start": 417, "end": 451 },
+                { "text": "Zmírňuje zánětlivá střevní onemocnění (Crohnova choroba, ulcerózní kolitida)", "start": 469, "end": 476 },
+                { "text": "Zlepšuje stav při syndromu propustného střeva, posiluje střevní bariéru", "start": 585, "end": 604 }
+              ]
+            },
+            {
+              "header": "Další účinky:",
+              "points": [
+                { "text": "Snížení cholesterolu: Nepřímo snižuje hladinu cholesterolu díky vazbě na žlučové kyseliny", "start": 237, "end": 304 },
+                { "text": "Protizánětlivé: Redukuje zánětlivé mediátory (cytokiny jako TNF-α)", "start": 484, "end": 516 },
+                { "text": "Hojení: Podporuje hojení zánětů u zubních implantátů, hojení nervových poškození a zrychluje regeneraci kostí", "start": 367, "end": 403 },
+                { "text": "Antibakteriální synergie: Zvyšuje účinnost antibiotik proti některým bakteriím (např. Pseudomonas aeruginosa, nemocniční kmen)", "start": 537, "end": 579 }
+              ]
+            }
+          ]
+        },
+        {
+          "header": "Dávkování, vedlejší účinky a rizika",
+          "subsections": [
+            {
+              "header": "Dávkování:",
+              "points": [
+                { "text": "Důležitá je pravidelnost", "start": 813, "end": 816 },
+                { "text": "Doporučuje se užívání v rámci krátkodobé kúry (4-6 týdnů)", "start": 758, "end": 763 },
+                { "text": "Postupné navyšování dávky (3-6 kapslí denně)", "start": 764, "end": 783 },
+                { "text": "Doplnění vitamínů: Váže vitamíny rozpustné v tucích (A, D, E, K) a esenciální mastné kyseliny, proto je nutná jejich suplementace", "start": 868, "end": 888 }
+              ]
+            },
+            {
+              "header": "Možné vedlejší účinky:",
+              "points": [
+                { "text": "Alergie na korýše", "start": 917, "end": 921 },
+                { "text": "Zácpa, průjem, plynatost (při nedostatečném pití nebo vysoké počáteční dávce)", "start": 928, "end": 946 },
+                { "text": "Lékové interakce: Může snižovat vstřebávání léků (např. antikonvulziva, antikoncepce), je nutný časový odstup 4 hodiny", "start": 965, "end": 996 }
+              ]
+            }
+          ]
+        },
+        {
+          "header": "Testování a širší souvislosti",
+          "subsections": [
+            {
+              "header": "Testování mikroplastů:",
+              "points": [
+                { "text": "V současné době chybí standardizované a rutinní krevní testy pro mikroplasty, i když existují soukromé možnosti", "start": 810, "end": 851 }
+              ]
+            },
+            {
+              "header": "Celostní detoxikace:",
+              "points": [
+                { "text": "Samotný chitosan nestačí. Důraz je kladen na celostní přístup, který zahrnuje:", "start": null, "end": null },
+                { "text": "Doplnění stravy (antioxidanty, minerály, vitamíny, kolagen)", "start": 1026, "end": 1035 },
+                { "text": "Zdravé oleje (omega-3 z lněného oleje)", "start": 1035, "end": 1069 },
+                { "text": "Fyzickou aktivitu (posilování, studené sprchy, sauna)", "start": 1074, "end": 1084 },
+                { "text": "Relaxaci a péči o psychiku, protože \"léčení je možné jen v relaxaci\"", "start": 1085, "end": 1090 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MTKmY2R-js0",
+      "czTitle": "Nebezpečí mikroplastu",
+      "topics": [
+        {
+          "header": "Hlavní téma: Mikroplastik a jeho nebezpečí pro lidské zdraví",
+          "points": [
+            { "text": "Úvod do problematiky", "start": 0, "end": 59 }
+          ]
+        },
+        {
+          "header": "1. Mikroplastik a jeho charakteristika",
+          "points": [
+            { "text": "Definice mikroplastu", "start": 65, "end": 73 },
+            { "text": "Nano-plast jako menší částice", "start": 73, "end": 77 },
+            { "text": "Množství plastu konzumovaného týdně", "start": 2, "end": 6 }
+          ]
+        },
+        {
+          "header": "2. Zdroje mikroplastu a cesty jeho příjmu",
+          "subsections": [
+            {
+              "header": "Zdroje v přírodě a produktech",
+              "points": [
+                { "text": "V moři, jezerech a řekách", "start": 82, "end": 86 },
+                { "text": "V potravinách a vodě", "start": 86, "end": 88 },
+                { "text": "V kosmetice a hračkách", "start": 96, "end": 101 },
+                { "text": "V pracích prostředcích, lécích a hnojivech", "start": 101, "end": 105 },
+                { "text": "V umělých trávnících a omezení EU", "start": 106, "end": 124 }
+              ]
+            },
+            {
+              "header": "Cesty příjmu do těla",
+              "points": [
+                { "text": "Skrze jídlo a pití", "start": 187, "end": 190 },
+                { "text": "Vdechování", "start": 128, "end": 129 },
+                { "text": "Kontakt s kůží", "start": 130, "end": 131 }
+              ]
+            },
+            {
+              "header": "Potravinové zdroje",
+              "points": [
+                { "text": "Klíčové potraviny s obsahem mikroplastu", "start": 252, "end": 288 },
+                { "text": "Sůl a ryby", "start": 279, "end": 288 },
+                { "text": "Teflonové pánve", "start": 320, "end": 327 },
+                { "text": "Mlýnky na sůl z plastu", "start": 301, "end": 309 }
+              ]
+            },
+            {
+              "header": "PFAS (\"věčné chemikálie\")",
+              "points": [
+                { "text": "Definice, vlastnosti a použití", "start": 210, "end": 233 },
+                { "text": "Stabilita a nerozložitelnost", "start": 234, "end": 238 }
+              ]
+            },
+            {
+              "header": "Kosmetické zdroje",
+              "points": [
+                { "text": "Přítomnost v kosmetice a zubních pastách", "start": 328, "end": 340 },
+                { "text": "Označení přírodní kosmetiky a aplikace \"Codecheck\"", "start": 341, "end": 351 },
+                { "text": "Peelingové přípravky", "start": 356, "end": 362 },
+                { "text": "Zákaz používání mikroplastů v EU a přechodné období", "start": 372, "end": 388 }
+              ]
+            }
+          ]
+        },
+        {
+          "header": "3. Vliv mikroplastu na lidský organismus a vědecké důkazy",
+          "subsections": [
+            {
+              "header": "Italská šokující studie",
+              "points": [
+                { "text": "Nález mikro a nano plastů v cévách (polyethylen a PVC)", "start": 11, "end": 36 },
+                { "text": "Zvýšené riziko úmrtí, infarktu a mrtvice", "start": 40, "end": 49 },
+                { "text": "Metodika a výsledky studie", "start": 603, "end": 709 }
+              ]
+            },
+            {
+              "header": "Studie z \"Chemosphere\"",
+              "points": [
+                { "text": "Potvrzení průniku do buněk", "start": 522, "end": 534 },
+                { "text": "Přenos z mateřské buňky na dceřinou", "start": 555, "end": 588 },
+                { "text": "Změny v buňkách a možné usnadnění tvorby metastáz", "start": 578, "end": 586 }
+              ]
+            },
+            {
+              "header": "Přítomnost v těle",
+              "points": [
+                { "text": "Nález v plicích, játrech, mateřském mléce a moči", "start": 133, "end": 152 }
+              ]
+            },
+            {
+              "header": "Oficiální postoj německých úřadů",
+              "points": [
+                { "text": "Chybí dlouhodobé studie a standardní data", "start": 408, "end": 411 },
+                { "text": "Shromažďování dat a prozatímní stanovisko", "start": 436, "end": 486 }
+              ]
+            },
+            {
+              "header": "Problémy s nano-plasty",
+              "points": [
+                { "text": "Schopnost vázat se na jiné znečišťující látky", "start": 490, "end": 509 }
+              ]
+            }
+          ]
+        },
+        {
+          "header": "4. Prevence a ochrana",
+          "points": [
+            { "text": "Minimalizace plastových obalů", "start": 718, "end": 725 },
+            { "text": "Správné třídění odpadu", "start": 728, "end": 732 },
+            { "text": "Používání přírodní kosmetiky", "start": 733, "end": 742 },
+            { "text": "Vyhýbání se plastovým lahvím a filtrace vody", "start": 755, "end": 797 },
+            { "text": "Používání litinových pánví namísto teflonových", "start": 816, "end": 836 },
+            { "text": "Volba přírodních materiálů", "start": 806, "end": 877 },
+            { "text": "Výběr pracích prostředků", "start": 837, "end": 844 }
+          ]
+        },
+        {
+          "header": "5. Detoxikace těla",
+          "points": [
+            { "text": "Většina částic je vyloučena, nano-plasty zůstávají", "start": 903, "end": 914 },
+            { "text": "Omezené možnosti (krevní dialýza)", "start": 915, "end": 934 },
+            { "text": "Shrnutí: Nejúčinnější je prevence", "start": 936, "end": 943 }
+          ]
+        }
+      ]
+    }
+  ]
+}
